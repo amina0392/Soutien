@@ -79,35 +79,34 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-
-
+        
+        alert("Pour avoir les explications des codes JavaScript, saisir dans le champ (Votre message), le mot : function ou let element ou let message ou displayResult.");
+        // La fonction (function afficherMessage()) sert à exectuter l'affichage du message.
         function afficherMessage() {
-
+            // La déclaration de variable (let element) à pour valeur les élements récupérés par (Id : your message).
             let element = document.getElementById("your-message").value;
-            let message = ["(function) sert à exectuter l'affichage du message.", "(let element) est une déclaration de variable récupérée par (Id : your message).", "(displayResult) sert à afficher le message dans notre page web."]
-            let choixUtilisateur = prompt("Choisir l'explication du code : function ou let element ou displayResult");
-
-            
-            if (element !== "function" && element !== "let element" && element !== "displayResult") {
-                choixUtilisateur = prompt("Choisir l'explication du code : function ou let element ou displayResult");
-            }
-            else if (choixUtilisateur === "function") {
+            // La déclaration de valeur (let message) ici en forme de tableau, correspond aux messages qui sont afficher dans le displayResult.
+            let message = ["La fonction (function afficherMessage()) sert à exectuter l'affichage du message.", 
+            "La déclaration de variable (let element) à pour valeur les élements récupérés par (Id : your message).", 
+            "La déclaration de valeur (let message) ici en forme de tableau, correspond aux messages qui sont afficher dans le displayResult.",
+            "La méthode (displayResult) sert à afficher ce qui est saisi dans ses parenthèses."]
+            if (element == "function") {
+                // La méthode (displayResult) sert à afficher ce qui est saisi dans ses parenthèses.
                 displayResult(message[0]);
-                
             }
-            else if (choixUtilisateur === "let element") {
+            else if (element == "let element") {
                 displayResult(message[1]);
-                
             }
-            else if (choixUtilisateur === "displayResult") {
+            else if (element == "let message") {
                 displayResult(message[2]);
-                
+            }
+            else if (element == "displayResult") {
+                displayResult(message[3]);   
             }
             else {
-                 displayResult("Veillez saisir l'un des mot proposé")
-                 
-            }  
-            console.log("Vous avez saisi le mot : " +element);
+                alert("Pour avoir les explications des codes JavaScript, saisir dans le champ (Votre message), le mot : function ou let element ou let message ou displayResult."); 
+            }
+            console.log("Vous avez saisi le mot : ", element);
         }
 
     </script>
