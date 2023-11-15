@@ -83,11 +83,31 @@
 
         function afficherMessage() {
 
-            let element = document.getElementById("your-message");
-            
-            let message = element.value;
+            let element = document.getElementById("your-message").value;
+            let message = ["(function) sert à exectuter l'affichage du message.", "(let element) est une déclaration de variable récupérée par (Id : your message).", "(displayResult) sert à afficher le message dans notre page web."]
+            let choixUtilisateur = prompt("Choisir l'explication du code : function ou let element ou displayResult");
 
-            displayResult('Vous avez écrit :', message);
+            
+            if (element !== "function" && element !== "let element" && element !== "displayResult") {
+                choixUtilisateur = prompt("Choisir l'explication du code : function ou let element ou displayResult");
+            }
+            else if (choixUtilisateur === "function") {
+                displayResult(message[0]);
+                
+            }
+            else if (choixUtilisateur === "let element") {
+                displayResult(message[1]);
+                
+            }
+            else if (choixUtilisateur === "displayResult") {
+                displayResult(message[2]);
+                
+            }
+            else {
+                 displayResult("Veillez saisir l'un des mot proposé")
+                 
+            }  
+            console.log("Vous avez saisi le mot : " +element);
         }
 
     </script>
