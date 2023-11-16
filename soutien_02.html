@@ -78,16 +78,16 @@
     <!-- javascript part -->
     <script type="text/javascript">
 
-        let numberA = document.getElementById("number").value;
-
+        let element = document.getElementById("number");
+        
         function afficherMessage() {
-            
+            let numberA = element.value;
             if ((numberA < 10) || (numberA > 100)) {
                 alert ("Erreur de saisie");
                 return;
-            }
-                
-            displayResult('Vous avez choisi :', numberA);
+            } 
+            
+            displayResult("Vous avez choisi :", numberA);
         }
 
     </script>
