@@ -86,11 +86,25 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-
+        
         // code here for the function multiply
-
+        function multiply(a,b) {
+        return(a*b);
+        }
         // code here for the function that is called on 'click'
-    
+        function calculerProduit() {
+        let monA = document.getElementById("number-A").value;
+        let monB = document.getElementById("number-B").value;
+            
+        let resultat = multiply(monA, monB);
+        displayResult("Votre resultat est =", resultat);
+        return(resultat);
+        }
+        console.log(calculerProduit());
+        
+        
+        
+        
 
     </script>
 
