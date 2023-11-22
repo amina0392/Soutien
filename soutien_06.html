@@ -84,13 +84,20 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-
+    let tableau;
     function genererTableau() {
-
+       tableau = randomArrayOfIntFromInterval (20, 0, 100);
+       displayArray(tableau);
     }
-
+    
     function filtrerTableau() {
-
+        let nouveauTableau = [];
+        for (let i = 0; i < tableau.length; i++) {
+            if (tableau[i] > 50) {
+                nouveauTableau.push(tableau[i]);
+            }                
+        }
+        displayArray(nouveauTableau);
     }
 
     </script>
